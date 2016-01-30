@@ -30,8 +30,7 @@ ADD files/confd /etc/confd
 
 VOLUME /opt/graphite/storage
 
-ADD ./config /opt/graphite/config/
-
+# Add new Service
 RUN mkdir /etc/service/go-carbon
 ADD start.sh /etc/service/go-carbon/run
 
