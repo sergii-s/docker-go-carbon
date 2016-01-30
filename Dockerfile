@@ -1,4 +1,4 @@
-FROM banno/carbon-base 
+FROM phusion/baseimage:latest
 
 #ENV NODE_NAME cache 
 ENV LOCAL_DATA_DIR /opt/graphite/storage/whisper/ 
