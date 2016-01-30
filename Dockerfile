@@ -1,7 +1,7 @@
 FROM banno/carbon-base 
 
 #ENV NODE_NAME cache 
-#ENV LOCAL_DATA_DIR /opt/graphite/storage/whisper/ 
+ENV LOCAL_DATA_DIR /opt/graphite/storage/whisper/ 
 #ENV MAX_CACHE_SIZE inf 
 #ENV MAX_UPDATES_PER_SECOND 1000 
 #ENV MAX_CREATES_PER_MINUTE inf 
