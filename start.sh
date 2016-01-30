@@ -1,7 +1,5 @@
 #!/bin/bash
 
-/opt/graphite/install-go-carbon.sh
-
 #sed -i -e "s/\[cache\]/\[${NODE_NAME}\]/g" ./conf/go-carbon.conf
 sed -i -e "s/\(LOCAL_DATA_DIR\).*$/\1 = $(printf "${LOCAL_DATA_DIR}" | sed -e 's/\//\\\//g')/g" /opt/graphite/config/carbon.conf
 #sed -i -e "s/\(MAX_CACHE_SIZE\).*$/\1 = ${MAX_CACHE_SIZE}/g" ./conf/go-carbon.conf
