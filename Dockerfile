@@ -22,6 +22,11 @@ RUN apt-get upgrade -y
 RUN wget https://github.com/lomik/go-carbon/releases/download/v0.7-beta4/go-carbon_0.7-beta4_amd64.deb 
 RUN dpkg -i go-carbon_0.7-beta4_amd64.deb
 
+# Confd installieren
+ADD https://github.com/kelseyhightower/confd/releases/download/v0.10.0/confd-0.10.0-linux-amd64 /usr/local/bin/confd
+RUN chmod +x /usr/local/bin/confd
+
+ADD files/confd /etc/confd
 
 VOLUME /opt/graphite/storage
 
