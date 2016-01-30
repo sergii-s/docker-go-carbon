@@ -19,7 +19,7 @@ RUN apt-get upgrade -y
 
 VOLUME /opt/graphite/storage
 
-ADD ./config /opt/graphite/conf/
+ADD ./config /opt/graphite/config/
 ADD install-go-carbon.sh /opt/graphite/
 ADD start.sh /opt/graphite/
 
