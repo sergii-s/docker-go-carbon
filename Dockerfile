@@ -26,8 +26,6 @@ RUN dpkg -i go-carbon_0.7-beta4_amd64.deb
 VOLUME /opt/graphite/storage
 
 ADD ./config /opt/graphite/config/
-ADD install-go-carbon.sh /opt/graphite/
-ADD start.sh /opt/graphite/
 
 RUN mkdir /etc/service/go-carbon
 ADD start.sh /etc/service/go-carbon/run
