@@ -13,7 +13,9 @@ ENV LOCAL_DATA_DIR /opt/graphite/storage/whisper/
 #ENV PICKLE_RECEIVER_PORT 2004 
 #ENV CACHE_QUERY_PORT 7002 
 
+RUN apt-get update
 RUN apt-get install git golang make
+RUN apt-get upgrade
 
 VOLUME /opt/graphite/storage
 
@@ -21,6 +23,8 @@ ADD ./config /opt/graphite/conf/
 ADD install-go-carbon.sh /opt/graphite/
 ADD start.sh /opt/graphite/
 
+RUN mkdir /etc/service/go-carbon
+ADD start.sh /etc/service/go-carbon/run
+
 EXPOSE 2003 2004 7002 
-WORKDIR /opt/graphite
-ENTRYPOINT ["./start.sh"]
+CMD ["/sbin/my_init"]
