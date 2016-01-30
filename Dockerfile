@@ -14,8 +14,8 @@ ENV LOCAL_DATA_DIR /opt/graphite/storage/whisper/
 #ENV CACHE_QUERY_PORT 7002 
 
 RUN apt-get update
-RUN apt-get install git golang make
-RUN apt-get upgrade
+RUN apt-get install -y git golang make
+RUN apt-get upgrade -y
 
 VOLUME /opt/graphite/storage
 
