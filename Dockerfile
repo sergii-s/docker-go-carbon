@@ -19,8 +19,8 @@ RUN apt-get install -y git golang make wget
 RUN apt-get upgrade -y
 
 # Download and install go carbon
-RUN wget https://github.com/lomik/go-carbon/releases/download/v0.7-beta4/go-carbon_0.7-beta4_amd64.deb 
-RUN dpkg -i go-carbon_0.7-beta4_amd64.deb
+RUN wget https://github.com/lomik/go-carbon/releases/download/v0.7/go-carbon_0.7_amd64.deb
+RUN dpkg -i go-carbon_0.7_amd64.deb
 
 
 VOLUME /opt/graphite/storage
